@@ -17,10 +17,15 @@ const Particles = () => {
     const resInformation = await reqInformation()
     setInformation(resInformation)
   }
+
   return information ? (
     <>
       <div className="side-bar col-xl-3 col-lg-4">
-        <SideBar sideBar={information.sideBar} />
+        <SideBar
+          sideBar={information.sideBar}
+          avatar={information.avatar}
+          CVHref={information.CVHref}
+        />
       </div>
       <div className="app_right  col-xl-9 col-lg-8">
         <div className="header container_shadow">

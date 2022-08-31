@@ -1,5 +1,7 @@
 const information = {
- 
+  avatar: "/img/avatar.jpg",
+  CVHref: '#',
+  
   /* Side Bar Information */
   sideBar: {
     name: "Emma Li",
@@ -7,9 +9,7 @@ const information = {
     title: "React Developer",
     phone: "0466 818 861",
     email: "limeng19917@gmail.com",
-    address: "Campsie, Sydney, NSW",
-    avatar: "/img/avatar.jpg",
-    CVHref:'#'
+    address: "Campsie, Sydney, NSW",   
 },
 
   /* Social links */

@@ -1,6 +1,8 @@
 import ajax from './ajax'
 
-const BASE = 'http://localhost:3002/api/v1'
+const BASE_URL = process.env.REACT_APP_BASE_URL
+
+const BASE = BASE_URL || 'http://localhost:3002/api/v1'
 
 // get information
 export const reqInformation = () => ajax(BASE + '/information')
