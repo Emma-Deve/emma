@@ -1,0 +1,20 @@
+{
+  "name": "personal-portfolio-of-emma",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "install-all": "npm i && (cd FE && npm i) && (cd BE && npm i)",
+    "start": "(cd FE && npm start) & (cd BE && npm start)",
+    "test": "(cd FE && npm test) & (cd BE && npm test)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emma-Deve/emma.git"
+  },
+  "author": "Emma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Emma-Deve/emma/issues"
+  },
+  "homepage": "https://github.com/Emma-Deve/emma#readme"
+}
