@@ -1,22 +1,22 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
 
-import MUIParticles from "react-particles-js";
+import MUIParticles from 'react-particles-js'
 
 const useStyles = makeStyles(() => ({
   particles: {
-    position: "absolute",
-    top: "-30px",
+    position: 'absolute',
+    top: '-30px',
     left: 0,
     opacity: 0.3,
-    width: "100vw",
-    height: "100vh",
-    zIndex: "-99",
+    width: '100vw',
+    height: '100vh',
+    zIndex: '-99',
   },
-}));
+}))
 
 const Particles = () => {
-  const classes = useStyles();
+  const classes = useStyles()
   return (
     <MUIParticles
       className={classes.particles}
@@ -30,10 +30,10 @@ const Particles = () => {
             },
           },
           shape: {
-            type: "triangle",
+            type: 'triangle',
             stroke: {
               width: 10,
-              color: "#FF4500",
+              color: '#FF4500',
             },
           },
           size: {
@@ -49,7 +49,7 @@ const Particles = () => {
         },
       }}
     />
-  );
-};
+  )
+}
 
-export default Particles;
+export default Particles

@@ -1,6 +1,6 @@
-import React from "react";
-import { Button, Typography } from "@material-ui/core";
-import "./MyButton.scss";
+import React from 'react'
+import { Button, Typography } from '@material-ui/core'
+import './MyButton.scss'
 
 function MyButton({ href, text, icon }) {
   return (
@@ -15,6 +15,6 @@ function MyButton({ href, text, icon }) {
         <Typography className="text">{text}</Typography>
       </Button>
     </a>
-  );
+  )
 }
-export default MyButton;
+export default MyButton

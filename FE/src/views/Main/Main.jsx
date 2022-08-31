@@ -1,9 +1,9 @@
-import React from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
-import { Box } from "@material-ui/core";
-import "./Main.scss";
+import React from 'react'
+import { Switch, Route, Redirect } from 'react-router-dom'
+import { Box } from '@material-ui/core'
+import './Main.scss'
 
-import routeList from "../../routeList/routeList";
+import routeList from '../../routeList/routeList'
 
 function Main() {
   return (
@@ -22,6 +22,6 @@ function Main() {
         <Route exact render={() => <Redirect to="/home" />} />
       </Switch>
     </Box>
-  );
+  )
 }
-export default Main;
+export default Main

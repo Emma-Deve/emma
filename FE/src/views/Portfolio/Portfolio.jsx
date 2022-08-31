@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, Fragment } from 'react'
 import {
   Grid,
   Typography,
@@ -13,24 +13,33 @@ import {
   DialogActions,
   DialogContent,
   DialogTitle,
-} from "@material-ui/core";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
-
-import "./Portfolio.scss";
-import resumeData from "../../config/resumeData";
-import MyTitle from "../../components/MyTitle/MyTitle";
+} from '@material-ui/core'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import { Carousel } from 'react-responsive-carousel'
+import './Portfolio.scss'
+import MyTitle from '../../components/MyTitle/MyTitle'
+import { reqPortfolio } from '../../api'
+import Loading from '../../components/Loading/Loading'
 
 function Portfolio() {
-  const [tabValue, setTabValue] = useState("All");
-  const portfolioData = resumeData.portfolio;
-  const [projectDialog, setProjectDialog] = useState("");
+  const [tabValue, setTabValue] = useState('All')
+  const [projectDialog, setProjectDialog] = useState('')
+
+  const [portfolio, setPortfolio] = useState(null)
+
+  useEffect(() => {
+    getPortfolio()
+  }, [])
+
+  const getPortfolio = async () => {
+    const resPortfolio = await reqPortfolio()
+    setPortfolio(resPortfolio)
+  }
 
   function openDialog() {
-    // console.log(projectDialog)
     return (
-      <Dialog open={projectDialog} onClose={() => setProjectDialog("")}>
-        <DialogTitle onClose={() => setProjectDialog("")}>
+      <Dialog open={projectDialog} onClose={() => setProjectDialog('')}>
+        <DialogTitle onClose={() => setProjectDialog('')}>
           {projectDialog.title}
         </DialogTitle>
         <DialogActions>
@@ -45,10 +54,10 @@ function Portfolio() {
         </DialogActions>
         <DialogContent>{projectDialog.description}</DialogContent>
       </Dialog>
-    );
+    )
   }
 
-  return (
+  return portfolio ? (
     <Grid container className="section">
       {/* title */}
       <Grid item className="title">
@@ -67,33 +76,29 @@ function Portfolio() {
             label="All"
             value="All"
             className={
-              tabValue === "All" ? "customTabs_item active" : "customTabs_item"
+              tabValue === 'All' ? 'customTabs_item active' : 'customTabs_item'
             }
           />
-          {[...new Set(portfolioData.map((item) => item.tag))].map(
-            (tag, index) => (
-              <Tab
-                key={index}
-                label={tag}
-                value={tag}
-                className={
-                  tag === tabValue
-                    ? "customTabs_item active"
-                    : "customTabs_item"
-                }
-              />
-            )
-          )}
+          {[...new Set(portfolio.map((item) => item.tag))].map((tag, index) => (
+            <Tab
+              key={index}
+              label={tag}
+              value={tag}
+              className={
+                tag === tabValue ? 'customTabs_item active' : 'customTabs_item'
+              }
+            />
+          ))}
         </Tabs>
       </Grid>
 
       {/* Projects */}
       <Grid item xs={12}>
         <Grid container spacing={8} justify="space-evenly">
-          {portfolioData.map((project, index) => (
-            <>
-              {tabValue === project.tag || tabValue === "All" ? (
-                <Grid key={index} item xs={12} md={6}>
+          {portfolio.map((project, index) => (
+            <Fragment key={index}>
+              {tabValue === project.tag || tabValue === 'All' ? (
+                <Grid item xs={12} md={6}>
                   <Grow in timeout={1000}>
                     <Card
                       className="card"
@@ -119,11 +124,13 @@ function Portfolio() {
                   {openDialog()}
                 </Grid>
               ) : null}
-            </>
+            </Fragment>
           ))}
         </Grid>
       </Grid>
     </Grid>
-  );
+  ) : (
+    <Loading />
+  )
 }
-export default Portfolio;
+export default Portfolio

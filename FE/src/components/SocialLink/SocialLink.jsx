@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "@material-ui/core";
-import resumeData from "../../config/resumeData";
+import React from 'react'
+import { Link } from '@material-ui/core'
+import resumeData from '../../config/resumeData'
 
-import "./SocialLink.scss";
+import './SocialLink.scss'
 
 function SocialLink() {
   return (
@@ -13,6 +13,6 @@ function SocialLink() {
         </Link>
       ))}
     </div>
-  );
+  )
 }
-export default SocialLink;
+export default SocialLink

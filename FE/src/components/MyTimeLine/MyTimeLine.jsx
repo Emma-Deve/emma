@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react'
 import {
   TimelineItem,
   TimelineSeparator,
   TimelineConnector,
   TimelineContent,
   TimelineDot,
-} from "@material-ui/lab";
-import { Typography } from "@material-ui/core";
-import "./MyTimeLine.scss";
+} from '@material-ui/lab'
+import { Typography } from '@material-ui/core'
+import './MyTimeLine.scss'
 
 export function MyTimeLineHeader({ title, icon, text }) {
   return (
@@ -23,7 +23,7 @@ export function MyTimeLineHeader({ title, icon, text }) {
         <Typography className="timeline_header_text">{text}</Typography>
       </TimelineContent>
     </TimelineItem>
-  );
+  )
 }
 
 export default function MyTimeLineItem({ title, subtitle, text, isLastItem }) {
@@ -31,7 +31,7 @@ export default function MyTimeLineItem({ title, subtitle, text, isLastItem }) {
     <TimelineItem className="timeline_item">
       <TimelineSeparator className="timeline_item_separator">
         <TimelineDot className="timeline_item_dot" />
-        <TimelineConnector style={isLastItem ? { display: "none" } : null} />
+        <TimelineConnector style={isLastItem ? { display: 'none' } : null} />
       </TimelineSeparator>
       <TimelineContent className="timeline_item_content">
         <Typography className="timeline_item_title">{title}</Typography>
@@ -39,5 +39,5 @@ export default function MyTimeLineItem({ title, subtitle, text, isLastItem }) {
         <Typography className="timeline_item_text">{text}</Typography>
       </TimelineContent>
     </TimelineItem>
-  );
+  )
 }

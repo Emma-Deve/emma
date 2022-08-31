@@ -1,15 +1,26 @@
-import React from "react";
-import { Box, Grid, TextField, Typography } from "@material-ui/core";
-import "./Contact.scss";
-import MyButton from "../../components/MyButton/MyButton";
-import ContactMailSharpIcon from "@material-ui/icons/ContactMailSharp";
-import MyTitle from "../../components/MyTitle/MyTitle";
-import SocialLink from "../../components/SocialLink/SocialLink";
-import resumeData from "../../config/resumeData";
+import React, { useEffect, useState } from 'react'
+import { Box, Grid, TextField, Typography } from '@material-ui/core'
+import './Contact.scss'
+import MyButton from '../../components/MyButton/MyButton'
+import ContactMailSharpIcon from '@material-ui/icons/ContactMailSharp'
+import MyTitle from '../../components/MyTitle/MyTitle'
+import SocialLink from '../../components/SocialLink/SocialLink'
+import { reqInformation } from '../../api'
+import Loading from '../../components/Loading/Loading'
 
 function Contact() {
-  const contactData = resumeData.sidebar || {};
-  return (
+  const [contact, setContact] = useState(null)
+
+  useEffect(() => {
+    getInformation()
+  }, [])
+
+  const getInformation = async () => {
+    const resInformation = await reqInformation()
+    setContact(resInformation.sideBar)
+  }
+
+  return contact ? (
     <Grid container className="contact" justify="space-between">
       {/* Contact Form */}
       <Grid item container xs={12} sm={6} spacing={4} className="form">
@@ -44,19 +55,19 @@ function Contact() {
             <Box component="div">
               <Typography className="item">
                 <Typography className="item_title">Address: </Typography>
-                {contactData.address}
+                {contact.address}
               </Typography>
               <Typography className="item">
                 <Typography className="item_title">Phone: </Typography>
-                {contactData.phone}
+                {contact.phone}
               </Typography>
               <Typography className="item">
                 <Typography className="item_title">Job: </Typography>
-                {contactData.job}
+                {contact.job}
               </Typography>
               <Typography className="item">
                 <Typography className="item_title">E-mail: </Typography>
-                {contactData.email}
+                {contact.email}
               </Typography>
               <SocialLink />
             </Box>
@@ -64,6 +75,8 @@ function Contact() {
         </Grid>
       </Grid>
     </Grid>
-  );
+  ) : (
+    <Loading />
+  )
 }
-export default Contact;
+export default Contact
