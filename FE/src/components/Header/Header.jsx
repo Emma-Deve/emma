@@ -6,12 +6,12 @@ import MyButton from '../../components/MyButton/MyButton'
 import SocialLink from '../../components/SocialLink/SocialLink'
 import HeaderLeftNav from '../../components/HeaderLeftNav/HeaderLeftNav'
 
-function Header() {
+function Header({ socials }) {
   return (
     <div className="header">
       <HeaderLeftNav />
       <div className="header_right">
-        <SocialLink />
+        <SocialLink socials={socials} />
         <MyButton
           text="hire me"
           icon={<SendIcon />}

@@ -7,7 +7,7 @@ function Footer({ footer }) {
   return (
     <Box component="div" className="footer">
       <Typography className="name">{footer.name}.</Typography>
-      <Typography className="title">{footer.job}</Typography>
+      <Typography className="title">{footer.title}</Typography>
     </Box>
   )
 }

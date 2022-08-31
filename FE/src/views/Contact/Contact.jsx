@@ -9,7 +9,7 @@ import { reqInformation } from '../../api'
 import Loading from '../../components/Loading/Loading'
 
 function Contact() {
-  const [contact, setContact] = useState(null)
+  const [information, setInformation] = useState(null)
 
   useEffect(() => {
     getInformation()
@@ -17,10 +17,10 @@ function Contact() {
 
   const getInformation = async () => {
     const resInformation = await reqInformation()
-    setContact(resInformation.sideBar)
+    setInformation(resInformation)
   }
 
-  return contact ? (
+  return information ? (
     <Grid container className="contact" justify="space-between">
       {/* Contact Form */}
       <Grid item container xs={12} sm={6} spacing={4} className="form">
@@ -55,21 +55,21 @@ function Contact() {
             <Box component="div">
               <Typography className="item">
                 <Typography className="item_title">Address: </Typography>
-                {contact.address}
+                {information.sideBar.address}
               </Typography>
               <Typography className="item">
                 <Typography className="item_title">Phone: </Typography>
-                {contact.phone}
+                {information.sideBar.phone}
               </Typography>
               <Typography className="item">
                 <Typography className="item_title">Job: </Typography>
-                {contact.job}
+                {information.sideBar.title}
               </Typography>
               <Typography className="item">
                 <Typography className="item_title">E-mail: </Typography>
-                {contact.email}
+                {information.sideBar.email}
               </Typography>
-              <SocialLink />
+              <SocialLink socials={information.socials} />
             </Box>
           }
         </Grid>

@@ -35,7 +35,11 @@ function SideBar({ sideBar }) {
         ))}
       </div>
       <div className="portrait_button">
-        <MyButton icon={<GetAppIcon />} text="Download Cv" href="#" />
+        <MyButton
+          icon={<GetAppIcon />}
+          text="Download Cv"
+          href={sideBar.CVHref}
+        />
       </div>
     </Box>
   )

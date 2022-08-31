@@ -9,7 +9,7 @@ function MyButton({ href, text, icon }) {
       href={href}
       rel="noreferrer"
       target="_blank"
-      download="Meng Li-Frontend Software Engineer.pdf"
+      download="EmmaLi_FrontEnd_Developer.pdf"
     >
       <Button className="myButton" endIcon={icon}>
         <Typography className="text">{text}</Typography>

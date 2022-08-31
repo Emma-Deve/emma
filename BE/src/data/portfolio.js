@@ -2,99 +2,183 @@ const portfolio = [
   /*Projects in Levo */
   {
     tag: "React",
-    title: "Smart Group Project",
-    image: "",
+    title: "Smart Group - Websites",
+    image: "/img/smartgroup_home.jpg",
+    caption:
+      "TypeScript + React + Hooks + TailwindCSS + Storybook",
+    description:
+      "Responsible for the core components development",
+    images: [
+      {
+        title: "Smart Group Home",
+        url: "/img/smartgroup_home.jpg",
+      },
+      {
+        title: "Smart Group Article",
+        url: "/img/smartgroup_article.jpg",
+      },
+      {
+        title: "Smart Group Investor",
+        url: "/img/smartgroup_investor.jpg",
+      },
+      {
+        title: "Smart Salary Home",
+        url: "/img/smartsalary_home.jpg",
+      },
+      {
+        title: "Vehicle Disposal Home",
+        url: "/img/vehicleDisposal_1.jpg",
+      }
+    ],
+  },
+ 
+  {
+    tag: "React",
+    title: "Smart Group - Vehicle Sales Portal",
+    image: "/img/VSP-home.jpg",
     caption:
       "TypeScript + React + Hooks + TailwindCSS + Storybook + MirageJs + Swagger + Fetch ",
     description:
-      "Responsible for the web application development of Course Modules, Exercise module, Assessment Module and Online Test Module.",
+      "Responsible for the setting ups of Storybook, SPA structure, State management, Mock Server and api capsulation. Responsible for components development.",
     images: [
       {
-        title: "Vehicle Sales Portal",
-        url: "",
+        title: "VSP_home",
+        url: "/img/VSP_home.jpg",
       },
       {
-        title: "Salary Packaging Calculator Portal",
-        url: "",
+        title: "VSP_comparison",
+        url: "/img/VSP_comparison.jpg",
       },
       {
-        title: "SmartGroup Website",
-        url: "",
+        title: "VSP_SPA_yourDetail",
+        url: "/img/VSP_SPA_yourDetail.jpg",
       },
       {
-        title: "SmartSalary Website",
-        url: "",
+        title: "VSP_SPA_leaseDetail",
+        url: "/img/VSP_SPA_leaseDetail.jpg",
       },
       {
-        title: "Vehicle Disposal",
-        url: "",
+        title: "VSP_SPA_accessories",
+        url: "/img/VSP_SPA_accessories.jpg",
+      },
+      {
+        title: "VSP_SPA_insurance",
+        url: "/img/VSP_SPA_insurance.jpg",
+      },
+      {
+        title: "VSP_SPA_review",
+        url: "/img/VSP_SPA_review.jpg",
       },
     ],
   },
   {
-    tag: "Next",
-    title: "Clemenger BBDO Website",
-    image: "",
-    caption: "Next + React + SCSS",
-    description: "Responsible for style updating based on Design",
+    tag: "React",
+    title: "Smart Group - Salary Packaging Calculator Portal",
+    image: "/img/Cal_home.png",
+    caption:
+      "TypeScript + React + Hooks + TailwindCSS + Storybook + MirageJs + Swagger + Fetch ",
+      description:
+      "Responsible for the setting ups of Storybook, SPA structure, State management, Mock Server and api capsulation. Responsible for components development.",
     images: [
       {
-        title: "Home page",
-        url: "",
+        title: "Cal_home",
+        url: "/img/Cal_home.png",
+      },
+      {
+        title: "Cal_SPA_benefits",
+        url: "/img/Cal_SPA_benefits.png",
+      },
+      {
+        title: "Cal_SPA_Detail",
+        url: "/img/Cal_SPA_Detail.png",
+      },
+      {
+        title: "Cal_SPA_result",
+        url: "/img/Cal_SPA_result.png",
       },
     ],
   },
+
+    /* Fulu open platform */
+    {
+      tag: "React",
+      title: "Fulu Open Platform",
+      image: "/img/cms_RechargeApi.jpg",
+      caption: "React + Redux + Axios + Ant-Design",
+      description:
+        "Participated in the development of application modules including Sale-Activities Management, Logistics Status Management and Selected Recharge APIs Management",
+      images: [
+        {
+          title: "cmsRecharge Apis",
+          url: "/img/cms_RechargeApi.jpg",
+        },
+        {
+          title: "cms selected service",
+          url: "/img/cms_service.jpg",
+        },
+        {
+          title: "cms logistics status",
+          url: "/img/cms_logistics.jpg",
+        },
+        {
+          title: "cms sales activities",
+          url: "/img/cms_activities.jpg",
+        },
+      ],
+  },
+    
+    /* Alekt admin */
+    {
+      tag: "React",
+      title: "Alekt admin application",
+      image: "/img/alekt_admin_2.png",
+      caption: "React + Redux +  Axios + Ant-Design",
+      description:
+        "Responsible for the development of Teachers management, courses management, students management and statistics analysis.",
+      images: [
+        {
+          title: "authorization",
+          url: "/img/alekt_admin_1.png",
+        },
+        {
+          title: "courses",
+          url: "/img/alekt_admin_2.png",
+        },
+        {
+          title: "courses",
+          url: "/img/alekt_admin_3.png",
+        },
+        {
+          title: "statistic analysis",
+          url: "/img/alekt_admin_4.png",
+        },
+      ],
+  },
+    
   /* Alekt website */
   {
     tag: "React",
     title: "Alekt website application",
-    image: "alekt_web_2",
+    image: "/img/alekt_web_2.png",
     caption: "React + Redux +  Axios + bootstrap + Ant-Design",
     description:
       "Responsible for the web application development of Course Modules, Exercise module, Assessment Module and Online Test Module.",
     images: [
       {
         title: "authorization",
-        url: "alekt_web_1",
+        url: "/img/alekt_web_1.png",
       },
       {
         title: "courses",
-        url: "alekt_web_2",
+        url: "/img/alekt_web_2.png",
       },
       {
         title: "courses",
-        url: "alekt_web_3",
+        url: "/img/alekt_web_3.png",
       },
       {
         title: "custom center",
-        url: "alekt_web_4",
-      },
-    ],
-  },
-  /* Alekt admin */
-  {
-    tag: "React",
-    title: "Alekt admin application",
-    image: "alekt_admin_2",
-    caption: "React + Redux +  Axios + Ant-Design",
-    description:
-      "Responsible for the development of Teachers management, courses management, students management and statistics analysis.",
-    images: [
-      {
-        title: "authorization",
-        url: "alekt_admin_1",
-      },
-      {
-        title: "courses",
-        url: "alekt_admin_2",
-      },
-      {
-        title: "courses",
-        url: "alekt_admin_3",
-      },
-      {
-        title: "statistic analysis",
-        url: "alekt_admin_4",
+        url: "/img/alekt_web_4.png",
       },
     ],
   },
@@ -123,30 +207,16 @@ const portfolio = [
   //   ],
   // },
 
-  /* Fulu open platform */
   {
-    tag: "React",
-    title: "Fulu Open Platform",
-    image: "cms_RechargeApi",
-    caption: "React + Redux +  Axios + Ant-Design",
-    description:
-      "Participated in the development of application modules including Sale-Activities Management, Logistics Status Management and Selected Recharge APIs Management",
+    tag: "Next",
+    title: "Clemenger BBDO Website",
+    image: "/img/clemenger_BBDO_1.jpg",
+    caption: "Next + React + SCSS",
+    description: "Responsible for style updating based on Design",
     images: [
       {
-        title: "cmsRecharge Apis",
-        url: "cms_RechargeApi",
-      },
-      {
-        title: "cms selected service",
-        url: "cms_service",
-      },
-      {
-        title: "cms logistics status",
-        url: "cms_logistics",
-      },
-      {
-        title: "cms sales activities",
-        url: "cms_activities",
+        title: "Home page",
+        url: "/img/clemenger_BBDO_1.jpg",
       },
     ],
   },
@@ -183,45 +253,46 @@ const portfolio = [
   {
     tag: "BootStrap",
     title: "Fulu official website",
-    image: "web_website_1",
+    image: "/img/web_website_1.jpg",
     caption: "HTML + CSS + jQuery + Bootstrap",
     description: "Fulu official website.",
     images: [
       {
         title: "web_website_1",
-        url: "web_website_1",
+        url: "/img/web_website_1.jpg",
       },
       {
         title: "web_website_2",
-        url: "web_website_2",
+        url: "/img/web_website_2.jpg",
       },
       {
         title: "web_website_3",
-        url: "web_website_3",
+        url: "/img/web_website_3.jpg",
       },
     ],
   },
+
 
   /* my portfolio */
   {
     tag: "React",
     title: "My Portfolio (Personal Project)",
-    image: "port_1",
+    image: "/img/port_1.jpg",
     caption: "React + Material-UI + Bootstrap",
     description:
       "It is a personal responsive web application of My Portfolio.",
     images: [
       {
         title: "port 1",
-        url: "port_1",
+        url: "/img/port_1.jpg",
       },
       {
         title: "port 2",
-        url: "port_2",
+        url: "/img/port_2.jpg",
       },
       {
         title: "port 3",
-        url: "port_3",
+        url: "/img/port_3.jpg",
       },
     ],
   },
