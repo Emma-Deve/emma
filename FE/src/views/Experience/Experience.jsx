@@ -1,16 +1,27 @@
-import React from "react";
-import { Box, Typography } from "@material-ui/core";
-import "./Experience.scss";
-import resumeData from "../../config/resumeData";
-import MyTitle from "../../components/MyTitle/MyTitle";
-import MyTimeLineItem from "../../components/MyTimeLine/MyTimeLine";
+import React, { useEffect, useState } from 'react'
+import { Box, Typography } from '@material-ui/core'
+import './Experience.scss'
+import MyTitle from '../../components/MyTitle/MyTitle'
+import MyTimeLineItem from '../../components/MyTimeLine/MyTimeLine'
+import { reqExperience } from '../../api'
+import Loading from '../../components/Loading/Loading'
 
 function Information() {
-  const workData = resumeData.experience || [];
-  return (
+  const [experience, setExperience] = useState(null)
+
+  useEffect(() => {
+    getExperience()
+  }, [])
+
+  const getExperience = async () => {
+    const resExperience = await reqExperience()
+    setExperience(resExperience)
+  }
+
+  return experience ? (
     <Box component="div" className="experience">
       <MyTitle title="Working History" className="title" />
-      {workData.map((item, index) => (
+      {experience.map((item, index) => (
         <Box key={index} component="div" className="card">
           <div className="card_content">
             <div className="title">
@@ -37,6 +48,8 @@ function Information() {
         </Box>
       ))}
     </Box>
-  );
+  ) : (
+    <Loading />
+  )
 }
-export default Information;
+export default Information

@@ -1,27 +1,38 @@
-import React from "react";
-import { Box, Typography } from "@material-ui/core";
-import LaptopMacSharpIcon from "@material-ui/icons/LaptopMacSharp";
-import "./Projects.scss";
-import resumeData from "../../config/resumeData";
-import MyTitle from "../../components/MyTitle/MyTitle";
+import React, { useEffect, useState } from 'react'
+import { Box, Typography } from '@material-ui/core'
+import LaptopMacSharpIcon from '@material-ui/icons/LaptopMacSharp'
+import './Projects.scss'
+import MyTitle from '../../components/MyTitle/MyTitle'
 import MyTimeLineItem, {
   MyTimeLineHeader,
-} from "../../components/MyTimeLine/MyTimeLine";
+} from '../../components/MyTimeLine/MyTimeLine'
+import Loading from '../../components/Loading/Loading'
+import { reqProject } from '../../api'
 
 function Information() {
-  const ProjectsData = resumeData.projects || [];
-  return (
+  const [project, setProject] = useState(null)
+
+  useEffect(() => {
+    getProject()
+  }, [])
+
+  const getProject = async () => {
+    const resProject = await reqProject()
+    setProject(resProject)
+  }
+
+  return project ? (
     <Box component="div" className="timeline">
       <MyTimeLineHeader
         className="timeline_header"
         icon={<LaptopMacSharpIcon />}
         title={<MyTitle title="projects" />}
-        text={""}
+        text={''}
       />
-      {ProjectsData.map((item, index) => (
+      {project.map((item, index) => (
         <MyTimeLineItem
           key={index}
-          isLastItem={index === ProjectsData.length - 1 ? true : false}
+          isLastItem={index === project.length - 1 ? true : false}
           title={
             <Typography className="item_title">
               {item.project}
@@ -50,6 +61,8 @@ function Information() {
         />
       ))}
     </Box>
-  );
+  ) : (
+    <Loading />
+  )
 }
-export default Information;
+export default Information

@@ -6,9 +6,9 @@ const experience = [
     description:
       "Responsible for the development of SmartGroup websites and portals which help customers to find ideal cars and financial solutions.",
     responsibilities: [
-      "???Responsible for the websites and portals setting ups of SmartGroup Project.",
-      "???Responsible for the ",
-      "work closely with Design, backend and test",
+      "Responsible for the websites and portals setting ups.",
+      "Responsible for projects' style and logic development.",
+      "Work closely with Design, Backend and Test.",
       "Assist junior developers with their work.",
     ],
   },
@@ -19,9 +19,9 @@ const experience = [
     description:
       "Responsible for the front end development and maintenance of Customer Relationship Management System which used to manage products, customers information and orders.",
     responsibilities: [
-      "responsible for the maintenance and the development the Custom Relationship Management System.",
-      "finished the development of Order modules including Pre-loan management, business investigation and loan repayment management",
-      "finished the development of a series of configuration pages for new products, including basic, product supply channel, fee, transaction and so on.",
+      "Responsible for the maintenance and the development the Custom Relationship Management System.",
+      "Finished the development of Order modules including Pre-loan management, business investigation and loan repayment management",
+      "Finished the development of a series of configuration pages for new products, including basic, product supply channel, fee, transaction and so on.",
     ],
   },
   {
