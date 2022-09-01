@@ -6,8 +6,7 @@ const experience = [
     description:
       "Responsible for the development of SmartGroup websites and portals which help customers to find ideal cars and financial solutions.",
     responsibilities: [
-      "Responsible for the websites and portals setting ups.",
-      "Responsible for projects' style and logic development.",
+      "Responsible for the websites and portals setting ups, responsive, reusable components development.",
       "Work closely with Design, Backend and Test.",
       "Assist junior developers with their work.",
     ],

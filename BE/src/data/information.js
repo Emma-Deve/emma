@@ -1,6 +1,6 @@
 const information = {
   avatar: "/img/avatar.jpg",
-  CVHref: '#',
+  CVHref: 'https://emma-cv.s3.ap-southeast-2.amazonaws.com/EmmaLi_React-Develope.pdf',
   
   /* Side Bar Information */
   sideBar: {
