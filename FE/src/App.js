@@ -7,7 +7,7 @@ import Particles from './components/Particles/Particles'
 function App() {
   return (
     <div className="app container">
-      <Particles />
+      {/* <Particles /> */}
       <div className="row">
         <PageContainer />
       </div>
