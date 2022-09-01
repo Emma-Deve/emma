@@ -35,7 +35,7 @@ const portfolio = [
   {
     tag: "React",
     title: "Smart Group - Vehicle Sales Portal",
-    image: "/img/VSP-home.jpg",
+    image: "/img/VSP_home.jpg",
     caption:
       "TypeScript + React + Hooks + TailwindCSS + Storybook + MirageJs + Swagger + Fetch ",
     description:

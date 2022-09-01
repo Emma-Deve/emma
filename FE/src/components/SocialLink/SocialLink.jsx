@@ -10,7 +10,7 @@ function SocialLink({ socials }) {
     MyGitHub: <GitHubIcon />,
     MyLinkedIn: <LinkedInIcon />,
   }
-  console.log(socials)
+
   return (
     <div className="icons d-inline-block d-md-none d-xl-inline-block">
       {Object.keys(socials).map((key, index) => (
