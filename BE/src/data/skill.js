@@ -43,7 +43,7 @@ const skill = {
   },
   {
     title: "Backend",
-    content: ["NodeJS", "Docker", "Docker-compose", "GraphQL"],
+    content: ["NodeJS", "Docker", "Docker-compose", "GraphQL","AWS"],
   },
 ]}
 
