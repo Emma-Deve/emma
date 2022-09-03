@@ -1,4 +1,4 @@
-<h2 align="center">My Portfolio build with React+Material-ui</h2>
+<h2 align="center">My Portfolio build with React + Material-ui + NodeJS + ExpressJS</h2>
 
 <div align="center">
 
@@ -16,12 +16,12 @@
 # Clone repository
 git clone git@github.com:Emma-Deve/emma.git
 
-# 进入walker-admin文件夹
+# enter emma file
 cd emma
 
-# 安装依赖
+# install dependencies
 npm install
-# 或者
+# or
 yarn add
 
 # start project
