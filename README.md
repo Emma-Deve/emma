@@ -3,10 +3,10 @@
 <div align="center">
 
 [![ReactJS](https://img.shields.io/badge/react-v17.0.1-%2361dafb)](https://reactjs.org/)
-[![React-Router](https://img.shields.io/badge/react--router-v5.2.0-brightgreen)](https://reacttraining.com/react-router/)
-[![Material-UI](https://img.shields.io/badge/%40material--ui-v4.11.2-%23764abc)](https://mui.com/)
-[![NodeJS](https://img.shields.io/badge/%40material--ui-v4.11.2-%23764abc)](https://nodejs.org/en/docs/)
-[![ExpressJS](https://img.shields.io/badge/%40ExpressJS-v4.16.1-%23764abc)](https://expressjs.com/)
+[![React-Router](https://img.shields.io/badge/react--router-v5.2.0-2361dafb)](https://reacttraining.com/react-router/)
+[![Material-UI](https://img.shields.io/badge/%40material--ui-v4.11.2-%2361dafb)](https://mui.com/)
+[![NodeJS](https://img.shields.io/badge/%40NodeJS-v4.11.2-%brightgreen)](https://nodejs.org/en/docs/)
+[![ExpressJS](https://img.shields.io/badge/%40ExpressJS-v4.16.1-%brightgreen)](https://expressjs.com/)
 
 </div>
 
